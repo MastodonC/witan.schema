@@ -22,7 +22,7 @@
    (s/required-key :password) (length-greater 5)})
 
 (def IdType
-  s/Str)
+  s/Uuid)
 
 (def DateTimeType
   sc/ISO-Date-Time)
