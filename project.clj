@@ -13,7 +13,8 @@
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2371"]
-                 [prismatic/schema "1.0.1"]]
+                 [prismatic/schema "1.0.1"]
+                 [kixi/schema-contrib "0.2.0"]]
 
   :plugins [[lein-cljsbuild "1.0.3"]]
 
