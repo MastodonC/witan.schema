@@ -48,7 +48,7 @@
 
 (def Model
   "Models are the center-piece of a Forecast"
-  {(s/required-key :series)     IdType
+  {(s/required-key :model-id)   IdType
    (s/required-key :name)       s/Str
    (s/required-key :owner)      IdType
    (s/required-key :version)    s/Int
@@ -99,7 +99,7 @@
 
 (def Forecast
   "Forecast"
-  {(s/required-key :series)        IdType
+  {(s/required-key :forecast-id)   IdType
    (s/required-key :name)          s/Str
    (s/required-key :owner)         IdType
    (s/required-key :version)       s/Int
