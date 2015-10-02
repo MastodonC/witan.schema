@@ -105,6 +105,7 @@
    (s/required-key :version)       s/Int
    (s/required-key :last-modified) DateTimeType
    (s/required-key :last-modifier) IdType
+   (s/required-key :in-progress?)  s/Bool
    (s/optional-key :description)   s/Str
    (s/optional-key :tag)           Tag})
 
