@@ -46,6 +46,11 @@
    (s/required-key :type)    ModelPropertyType
    (s/optional-key :context) s/Any}) ;; varies depending on the type
 
+(def ModelPropertyValue
+  "A model property and value binding"
+  {(s/required-key :property-id) IdType
+   (s/required-key :value) s/Any}) ;; varies depending on the ModelProperty type
+
 (def Model
   "Models are the center-piece of a Forecast"
   {(s/required-key :model-id)   IdType
@@ -71,7 +76,7 @@
    (s/required-key :name) s/Str})
 
 (def ModelOutputCategory
-  "Inputs into the model"
+  "Outputs from the model"
   {(s/required-key :id)   IdType
    (s/required-key :name) s/Str})
 
@@ -85,9 +90,10 @@
 
 (def ModelInfo
   "More in-depth information about a Model"
-  {(s/required-key :model)    Model
-   (s/required-key :inputs)  [ModelInput]
-   (s/required-key :outputs) [ModelOutput]})
+  {(s/required-key :model)       Model
+   (s/required-key :inputs)     [ModelInput]
+   (s/required-key :outputs)    [ModelOutput]
+   (s/optional-key :properties) [ModelPropertyValue]})
 
 (def Tag
   "A tag is an annotated symlink to a forecast id and version"
