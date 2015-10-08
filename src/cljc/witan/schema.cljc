@@ -53,11 +53,15 @@
 
 (def Model
   "Models are the center-piece of a Forecast"
-  {(s/required-key :model-id)   IdType
-   (s/required-key :name)       s/Str
-   (s/required-key :owner)      IdType
-   (s/required-key :version)    s/Int
-   (s/optional-key :properties) [ModelProperty]})
+  {(s/required-key :id)             IdType
+   (s/required-key :name)           s/Str
+   (s/required-key :owner)          IdType
+   (s/required-key :series-id)      IdType
+   (s/required-key :version)        s/Int
+   (s/required-key :created)        DateTimeType
+   (s/required-key :descendant-id) (s/maybe IdType)
+   (s/optional-key :description)    s/Str
+   (s/optional-key :properties)    [ModelProperty]})
 
 (def DataItem
   "A data item"
