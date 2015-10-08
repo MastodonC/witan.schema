@@ -105,14 +105,13 @@
 
 (def Forecast
   "Forecast"
-  {(s/required-key :id)            IdType
+  {(s/required-key :version-id)    IdType
    (s/required-key :name)          s/Str
    (s/required-key :owner)         IdType
-   (s/required-key :series-id)     IdType
+   (s/required-key :forecast-id)   IdType
    (s/required-key :version)       s/Int
    (s/required-key :created)       DateTimeType
    (s/required-key :in-progress?)  s/Bool
-   (s/required-key :descendant-id) (s/maybe IdType)
    (s/optional-key :description)   s/Str
    (s/optional-key :tag)           Tag})
 
